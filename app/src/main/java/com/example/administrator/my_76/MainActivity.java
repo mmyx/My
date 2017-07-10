@@ -13,7 +13,7 @@ import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+//myaaaaaaaa
 public class MainActivity extends AppCompatActivity {
 
     private ListView list;
@@ -62,12 +62,12 @@ public class MainActivity extends AppCompatActivity {
               map.put("content",content);
               list_map.add(map);
           }
-       /* Cursor url = readable_url.query("url", null, null, null, null, null, null);
+        Cursor url = readable_url.query("url", null, null, null, null, null, null);
         while (url.moveToNext()){
             HashMap<String,String> map=new HashMap<>();
             String name = us.getString(1);
             map.put("url",name);
-        }*/
+        }
         SimpleAdapter adapter=new SimpleAdapter(MainActivity.this,list_map,R.layout.item,new String[]{"name","content"},new int[]{R.id.text1,R.id.text2});
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -79,5 +79,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
+   }
 }
